@@ -1,0 +1,126 @@
+tgit init - инициализация репозитория
+git add .
+git add -A
+git add .css
+git add main.css добавление файлов в репозиторий
+git commit - вносит изменения в репозиторий (git commit -a -m"Название коммита")  вносит все файлы в репозиторий
+
+_______________________________________________________________________
+
+git branch - создание новой ветки
+
+git checkout - переключение между ветками
+git checkout -b создать новую ветку и переключиться на неё с помощью одной команды
+
+
+git merge -  слияние веток (древо)
+git merge bugFix - добавить изменения из bugFix в ветку main (находясь в ветки main, получаю изменения из bugFix) git
+git rebase - второй способ слияния веток При ребейзе Git по сути копирует набор коммитов и переносит их в другое место. 
+git rebase main- добавить изменения из bugFix в ветку main (находясь в ветке bugFix, передаю изменения в main)
+git rebase bugFix - добавить изменения из маин в ветку  bugFix
+
+git rebase master - я получила изменения с мастера
+
+Git revert - отмена изменений
+
+git checkout C1 - переключение между коммитами
+git checkout main^ - переключится на родителя (предыдущий коммит)
+git checkout main^^ - переключится на прародителя (предыдущий предыдущего коммита)
+git checkout HEAD~4 - переключится на 4 родителя вверх
+git branch -f main HEAD~3 переключение на 3 уровня между коммитами
+
+git pull - получить изменения с сервера
+git push - отправить изменения на сервер
+git push -f -  принудительно отправить на сервер
+
+___________________________________________________________________
+
+ubuntu
+
+tatyana@DESKTOP-8DBNHI0:~$ code
+tatyana@DESKTOP-8DBNHI0:~$ cd /home/tatyana/client-lenta
+tatyana@DESKTOP-8DBNHI0:~/client-lenta$ ./develop down
+[+] Running 6/6
+ ⠿ Container app-local             Removed                                                                         1.6s
+ ⠿ Container client-lenta_redis_1  Removed                                                                         1.7s
+ ⠿ Container node-local            Removed                                                                         1.1s
+ ⠿ Container nginx-local           Removed                                                                         1.8s
+ ⠿ Network client-lenta_rf-net     Removed                                                                         0.3s
+ ⠿ Network client-lenta_default    Removed                                                                         0.2s
+tatyana@DESKTOP-8DBNHI0:~/client-lenta$
+
+
+
+git branch -f main C6
+git checkout HEAD~1
+git branch -f bugFix HEAD~1
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+Это общие команды Git, используемые в различных ситуациях:
+
+начать рабочую область (см. также: руководство по git help)
+   clone Клонировать репозиторий в новый каталог
+   init Создать пустой репозиторий Git или повторно инициализировать существующий
+
+работать над текущим изменением (см. также: git help каждый день)
+   add Добавить содержимое файла в индекс
+   mv Перемещение или переименование файла, каталога или символической ссылки
+   восстановить Восстановить файлы рабочего дерева
+   rm Удалить файлы из рабочего дерева и из индекса
+   sparse-checkout Инициализировать и изменить sparse-checkout
+
+изучить историю и состояние (см. также: git help revisions)
+   bisect Используйте двоичный поиск, чтобы найти фиксацию, которая привела к ошибке
+   diff Показать изменения между коммитами, фиксацией и рабочим деревом и т. д.
+   grep Печатать строки, соответствующие шаблону
+   log Показать журналы фиксации
+   показать Показать различные типы объектов
+   status Показать статус рабочего дерева
+
+расти, отмечать и корректировать вашу общую историю
+   Список веток, создание или удаление веток
+   зафиксировать Записать изменения в репозиторий
+   объединить Объединить две или более историй разработки вместе
+   rebase Reapply фиксируется поверх другой базовой подсказки
+   сброс Сбросить текущую ГОЛОВУ в указанное состояние
+   переключить Переключить ветви
+   tag Создать, перечислить, удалить или проверить объект тега, подписанный с помощью GPG
+
+сотрудничать (см. также: рабочие процессы справки git)
+   fetch Загрузить объекты и ссылки из другого репозитория
+   вытащить Fetch из другого репозитория или локальной ветки и интегрировать с ним
+   нажмите Обновить удаленные ссылки вместе со связанными объектами
